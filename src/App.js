@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { GlobalStyle } from './globalStyles';
+
+const Home = React.lazy(() => import('./Pages/Home'));
+const Header = React.lazy(() => import('./components/Header'));
+const Footer = React.lazy(() => import('./components/Footer'));
+const ScrollToTop = React.lazy(() => import('./components/ScrollToTop'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <React.Suspense fallback={null}>
+        <GlobalStyle />
+        <Header />
+        <Home />
+        <Footer />
+        <ScrollToTop />
+      </React.Suspense>
+    </>
   );
 }
 
