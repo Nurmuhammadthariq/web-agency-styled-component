@@ -140,6 +140,20 @@ const MobileMenu = styled.div`
     font-size: 1.5rem;
     margin: 1.5rem;
     cursor: pointer;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 3px;
+      background: transparent;
+      transition: width 0.5s;
+    }
+
+    &:not(:last-child):hover::after {
+      width: 100%;
+      background: var(--purple);
+    }
   }
 `;
 
