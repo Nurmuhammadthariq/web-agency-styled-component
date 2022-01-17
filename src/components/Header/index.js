@@ -69,8 +69,18 @@ const Button = styled.button`
     transform: scale(1.1);
   }
 
-  &:focus {
+  &:active {
     transform: scale(0.9);
+  }
+  @media only Screen and (max-width: 56em) {
+    font-size: 1.2rem;
+    &:hover {
+      transform: none;
+    }
+
+    &:active {
+      transform: none;
+    }
   }
 `;
 
