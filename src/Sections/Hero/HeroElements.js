@@ -31,6 +31,7 @@ export const Blobs = styled.div`
   right: 0;
   @media only Screen and (max-width: 56em) {
     opacity: 0.5;
+    width: 75%;
   }
 `;
 
