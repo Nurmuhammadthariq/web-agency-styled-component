@@ -11,6 +11,13 @@ const Headers = styled.header`
   color: var(--white);
   position: relative;
   z-index: 500;
+  @media only Screen and (max-width: 56em) {
+    padding: 1rem 2rem;
+  }
+
+  @media only Screen and (max-width: 539px) {
+    padding: 1rem 2rem;
+  }
 `;
 
 const Logo = styled.a`
